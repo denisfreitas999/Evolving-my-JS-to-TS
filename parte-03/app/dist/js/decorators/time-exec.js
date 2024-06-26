@@ -6,7 +6,7 @@ export function timeExec() {
             const retorno = metodoOriginal.apply(this, args);
             const t2 = performance.now();
             console.log(`Tempo de execução do método ${propertyKey}: ${(t2 - t1) / 1000} segundos.`);
-            retorno;
+            return retorno;
         };
         return descriptor;
     };
